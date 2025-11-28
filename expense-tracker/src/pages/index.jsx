@@ -1,8 +1,15 @@
 import React from 'react'
+import { ExpenseProvider } from '../context/ExpenseContext'
+import DashboardLayout from '../layouts/DashboardLayout'
+import Dashboard from '../components/Dashboard'
 
 const Index = () => {
   return (
-    <div className="text-5xl">Index</div>
+    <ExpenseProvider>
+      <DashboardLayout>
+        <Dashboard />
+      </DashboardLayout>
+    </ExpenseProvider>
   )
 }
 
